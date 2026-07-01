@@ -205,6 +205,250 @@ body.dark-mode .subject-card {
     color: #6b7280;
 }
 
+/* ==================== Courses Section ==================== */
+.courses {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+}
+
+body.dark-mode .courses {
+    background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.courses h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.course-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--border-color);
+    background: var(--bg-light);
+    color: var(--text-dark);
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+body.dark-mode .filter-btn {
+    background: #1f2937;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-color: transparent;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.course-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+body.dark-mode .course-card {
+    background: #1f2937;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.course-thumbnail {
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-thumbnail::after {
+    content: '▶';
+    position: absolute;
+    font-size: 2rem;
+    color: white;
+    opacity: 0.7;
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-category {
+    display: inline-block;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.course-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.course-instructor {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.75rem;
+}
+
+.course-description {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.course-meta {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.course-duration {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.course-level {
+    display: inline-block;
+    background: var(--border-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.course-button {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.course-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* ==================== Video Modal ==================== */
+.video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.video-modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: var(--bg-light);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+body.dark-mode .modal-content {
+    background: #1f2937;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(239, 68, 68, 0.2);
+    border: none;
+    color: #ef4444;
+    font-size: 2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+.modal-header {
+    padding: 2rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.modal-header h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+}
+
+.video-container {
+    padding: 2rem;
+    background: #000;
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.video-info {
+    padding: 2rem;
+    color: var(--text-dark);
+}
+
 /* ==================== Study Tools Section ==================== */
 .study-tools {
     padding: 80px 0;
@@ -338,10 +582,10 @@ body.dark-mode .contact-form {
     border: 2px solid var(--border-color);
     border-radius: 8px;
     font-size: 1rem;
-    font-family: inherit;
     background: var(--bg-light);
     color: var(--text-dark);
     transition: border-color 0.3s;
+    font-family: inherit;
 }
 
 .form-group input:focus,
@@ -408,6 +652,22 @@ body.dark-mode .contact-form {
     opacity: 0.8;
 }
 
+.hidden {
+    display: none !important;
+}
+
+/* ==================== Animations ==================== */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ==================== Responsive Design ==================== */
 @media (max-width: 768px) {
     .hamburger {
@@ -438,32 +698,26 @@ body.dark-mode .contact-form {
         font-size: 2.5rem;
     }
 
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .subjects h2,
-    .study-tools h2,
-    .resources h2,
-    .contact h2 {
-        font-size: 2rem;
-    }
-
-    .subjects-grid,
-    .tools-grid,
-    .resources-list {
+    .courses-grid {
         grid-template-columns: 1fr;
     }
 
-    .hero {
-        padding: 50px 0;
+    .course-filter {
+        flex-direction: column;
     }
 
-    .subjects,
-    .study-tools,
-    .resources,
-    .contact {
-        padding: 50px 0;
+    .filter-btn {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .video-container {
+        padding: 1rem;
+        margin: 1rem;
     }
 }
 
@@ -474,5 +728,13 @@ body.dark-mode .contact-form {
 
     .nav-brand h1 {
         font-size: 1.3rem;
+    }
+
+    .subjects h2,
+    .courses h2,
+    .study-tools h2,
+    .resources h2,
+    .contact h2 {
+        font-size: 1.8rem;
     }
 }

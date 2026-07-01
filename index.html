@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Hub - Your Study Companion</title>
+    <title>Learning Hub - Study Website with Courses</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,6 +16,7 @@
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#subjects">Subjects</a></li>
+                <li><a href="#courses">Courses</a></li>
                 <li><a href="#resources">Resources</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
@@ -33,7 +34,7 @@
         <div class="container">
             <div class="hero-content">
                 <h2>Welcome to Learning Hub</h2>
-                <p>Your personalized study companion for mastering any subject</p>
+                <p>Your personalized study companion with courses and video tutorials</p>
                 <button class="cta-btn">Start Learning</button>
             </div>
         </div>
@@ -77,6 +78,39 @@
             </div>
         </div>
     </section>
+
+    <!-- Study Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Featured Courses</h2>
+            <div class="course-filter">
+                <button class="filter-btn active" data-category="all">📚 All Courses</button>
+                <button class="filter-btn" data-category="mathematics">🔢 Mathematics</button>
+                <button class="filter-btn" data-category="programming">💻 Programming</button>
+                <button class="filter-btn" data-category="science">🔬 Science</button>
+                <button class="filter-btn" data-category="language">🌐 Languages</button>
+            </div>
+            <div class="courses-grid" id="courses-grid">
+                <!-- Courses will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal hidden">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h3 id="video-title"></h3>
+            </div>
+            <div class="video-container">
+                <iframe id="video-frame" width="100%" height="500" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <p id="video-description"></p>
+            </div>
+        </div>
+    </div>
 
     <!-- Study Tools Section -->
     <section class="study-tools">
