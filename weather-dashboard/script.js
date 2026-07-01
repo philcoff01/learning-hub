@@ -1,5 +1,5 @@
 // ==================== Configuration ====================
-const API_KEY = 'YOUR_API_KEY_HERE'; // Get from https://openweathermap.org/api
+const API_KEY = '54cd5ae824b02a0800a6ca20feb02136'; // Get from https://openweathermap.org/api
 const API_BASE_URL = 'https://api.openweathermap.org/data/2.5';
 const GEO_API_URL = 'https://api.openweathermap.org/geo/1.0';
 
