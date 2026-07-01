@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Hub - Your Study Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>📚 Learning Hub</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#subjects">Subjects</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Welcome to Learning Hub</h2>
+                <p>Your personalized study companion for mastering any subject</p>
+                <button class="cta-btn">Start Learning</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="subjects">
+        <div class="container">
+            <h2>Popular Subjects</h2>
+            <div class="subjects-grid">
+                <div class="subject-card" data-subject="mathematics">
+                    <div class="card-icon">🔢</div>
+                    <h3>Mathematics</h3>
+                    <p>Algebra, Geometry, Calculus & more</p>
+                </div>
+                <div class="subject-card" data-subject="science">
+                    <div class="card-icon">🔬</div>
+                    <h3>Science</h3>
+                    <p>Physics, Chemistry, Biology</p>
+                </div>
+                <div class="subject-card" data-subject="history">
+                    <div class="card-icon">🏛️</div>
+                    <h3>History</h3>
+                    <p>World events & civilizations</p>
+                </div>
+                <div class="subject-card" data-subject="language">
+                    <div class="card-icon">🌐</div>
+                    <h3>Languages</h3>
+                    <p>Learn English, Spanish, French & more</p>
+                </div>
+                <div class="subject-card" data-subject="programming">
+                    <div class="card-icon">💻</div>
+                    <h3>Programming</h3>
+                    <p>JavaScript, Python, Web Development</p>
+                </div>
+                <div class="subject-card" data-subject="art">
+                    <div class="card-icon">🎨</div>
+                    <h3>Arts</h3>
+                    <p>Drawing, Design, and creativity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Study Tools Section -->
+    <section class="study-tools">
+        <div class="container">
+            <h2>Study Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>📝 Note Taking</h3>
+                    <p>Create and organize your study notes efficiently</p>
+                </div>
+                <div class="tool-card">
+                    <h3>⏱️ Pomodoro Timer</h3>
+                    <p>Manage your study sessions with the Pomodoro technique</p>
+                </div>
+                <div class="tool-card">
+                    <h3>📊 Progress Tracker</h3>
+                    <p>Monitor your learning progress and achievements</p>
+                </div>
+                <div class="tool-card">
+                    <h3>🎯 Goal Setting</h3>
+                    <p>Set and achieve your learning goals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Learning Resources</h2>
+            <div class="resources-list">
+                <div class="resource-item">
+                    <h3>📖 E-Books</h3>
+                    <p>Access a library of free and premium e-books</p>
+                </div>
+                <div class="resource-item">
+                    <h3>🎥 Video Tutorials</h3>
+                    <p>Learn from expert video lessons on any topic</p>
+                </div>
+                <div class="resource-item">
+                    <h3>🧠 Quizzes & Tests</h3>
+                    <p>Test your knowledge with interactive quizzes</p>
+                </div>
+                <div class="resource-item">
+                    <h3>👥 Community Forum</h3>
+                    <p>Connect with other learners and experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div id="form-message" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Learning Hub. All rights reserved. | Made with ❤️ for learners</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Twitter</a>
+                <a href="#" class="social-icon">Facebook</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
