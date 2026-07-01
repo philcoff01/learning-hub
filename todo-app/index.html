@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>✓ My To-Do List</h1>
+                <p>Organize your tasks and boost productivity</p>
+            </div>
+            <div class="header-controls">
+                <button id="theme-btn" class="theme-btn" title="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container main-content">
+        <!-- Input Section -->
+        <section class="input-section">
+            <div class="input-box">
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    class="task-input" 
+                    placeholder="Add a new task..."
+                    autocomplete="off"
+                >
+                <select id="priority-select" class="priority-select">
+                    <option value="low">🟢 Low</option>
+                    <option value="medium" selected>🟡 Medium</option>
+                    <option value="high">🔴 High</option>
+                </select>
+                <button id="add-btn" class="add-btn">➕ Add Task</button>
+            </div>
+            <div class="quick-actions">
+                <button id="clear-completed-btn" class="action-btn clear-btn" title="Clear completed tasks">🗑️ Clear Completed</button>
+                <button id="clear-all-btn" class="action-btn delete-btn" title="Delete all tasks">❌ Clear All</button>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <span class="stat-label">Total Tasks</span>
+                <span class="stat-value" id="total-tasks">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Completed</span>
+                <span class="stat-value completed" id="completed-tasks">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Remaining</span>
+                <span class="stat-value remaining" id="remaining-tasks">0</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Progress</span>
+                <span class="stat-value" id="progress-percent">0%</span>
+            </div>
+        </section>
+
+        <!-- Filter & Sort Section -->
+        <section class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">📋 All</button>
+                <button class="filter-btn" data-filter="active">⏳ Active</button>
+                <button class="filter-btn" data-filter="completed">✅ Completed</button>
+            </div>
+            <div class="sort-buttons">
+                <button id="sort-priority-btn" class="sort-btn" title="Sort by priority">⬆️ Priority</button>
+                <button id="sort-date-btn" class="sort-btn" title="Sort by date">📅 Date</button>
+                <button id="sort-name-btn" class="sort-btn" title="Sort by name">🔤 Name</button>
+            </div>
+        </section>
+
+        <!-- Tasks List Section -->
+        <section class="tasks-section">
+            <div id="tasks-list" class="tasks-list"></div>
+            <div id="empty-state" class="empty-state hidden">
+                <p class="empty-icon">📝</p>
+                <p class="empty-text">No tasks yet!</p>
+                <p class="empty-subtext">Add a new task to get started</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>To-Do List App | Built with ❤️ | All data saved locally</p>
+    </footer>
+
+    <!-- Notification -->
+    <div id="notification" class="notification hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
